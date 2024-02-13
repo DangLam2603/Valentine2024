@@ -8,7 +8,7 @@
 <style>
 /* HELLO MAX! THIS IS MY CSS! */
 body {
-	background-image: url('tandem_grey.png');
+	background-image: url('tandem_bg.png');
 }
 body::before {
 	content: url('tandem_grey.png') url('broken.png') url('clock.png') url('colors.png')  url('emiu.jpeg') url('thePerks.jpeg');
@@ -68,9 +68,16 @@ body::before {
 					width: "780px", // Adjust the width as needed
 					height: "517px" // Adjust the height as needed
 				});
-		body.removeClass("no").removeClass("maybe")
-		image.removeClass("benefits").removeClass("certificate")
-		var answer = prompt("Will you be my valentine? Yes, No, Maybe?").toLowerCase()
+
+				image.addClass("certificate")
+			  // Create a new paragraph element
+			  var textElement = $("<h1>").text("Happy Valentine's Day bé Xoài ");
+				textElement.addClass("text-under-image");
+    // Append the paragraph element to the container where the image is located
+    			image.parent().append(textElement);	
+		// body.removeClass("no").removeClass("maybe")
+		// image.removeClass("benefits").removeClass("certificate")
+		// var answer = prompt("Will you be my valentine? Yes, No, Maybe?").toLowerCase()
 /* .toLowerCase IS BEST PRACTICE! IT'S ALSO OK IF YOU TYPE THE FIRST LETTER INSTEAD OF THE WORD! */
 		if (answer == "yes" || answer == 'y') {
 			body.addClass("yes")
